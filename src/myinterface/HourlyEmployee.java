@@ -17,4 +17,5 @@ public interface HourlyEmployee {
     public double getWeeklyHours();
     public void setWeeklyHours(double weeklyHours);
     public double getWeeklyWage();
+    public String toString();
 }
