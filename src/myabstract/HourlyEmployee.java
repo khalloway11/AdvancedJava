@@ -10,7 +10,7 @@ package myabstract;
  *
  * @author Keiji
  */
-public abstract class HourlyEmployee extends Employee{
+public abstract class HourlyEmployee extends Employee implements myinterface.HourlyEmployee{
     private double hour_rate;
     private double weeklyHours;
     
@@ -20,23 +20,31 @@ public abstract class HourlyEmployee extends Employee{
         this.weeklyHours = hours;
     }
 
+    @Override
     public double getHour_rate() {
         return hour_rate;
     }
 
+    @Override
     public void setHour_rate(double hour_rate) {
         this.hour_rate = hour_rate;
     }
 
+    @Override
     public double getWeeklyHours() {
         return weeklyHours;
     }
 
+    @Override
     public void setWeeklyHours(double weeklyHours) {
         this.weeklyHours = weeklyHours;
     }
     
+    @Override
     public double getWeeklyWage(){
         return hour_rate * weeklyHours;
     }
+    
+    @Override
+    public abstract String toString();
 }

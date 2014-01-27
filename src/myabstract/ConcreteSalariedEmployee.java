@@ -4,27 +4,34 @@
  * and open the template in the editor.
  */
 
-package myconcrete;
+package myabstract;
+
+import myconcrete.*;
 
 /**
  *
  * @author Keiji
  */
-public class SalariedEmployee extends Employee{
+public class ConcreteSalariedEmployee extends Employee implements myinterface.SalariedEmployee{
     private double salary;
     
-    public SalariedEmployee(String fname, String lname, double salary){
+    public ConcreteSalariedEmployee(String fname, String lname, double salary){
         super(fname, lname);
         this.salary = salary;
     }
 
+    @Override
     public double getSalary() {
         return salary;
     }
 
+    @Override
     public void setSalary(double salary) {
         this.salary = salary;
     }
     
-    
+    @Override
+    public String toString(){
+        return super.toString() + "\rAnnual salary: $" + this.salary;
+    }
 }
