@@ -12,7 +12,7 @@ import myconcrete.*;
  *
  * @author Keiji
  */
-public class ConcreteSalaryPlusComissionEmployee extends SalariedEmployee implements myinterface.SalaryPlusComissionEmployee{
+public class ConcreteSalaryPlusComissionEmployee extends SalaryPlusComissionEmployee{
     private double comissionRate, totalSales;
     
     public ConcreteSalaryPlusComissionEmployee(String fname, String lname, double salary, double comission){
