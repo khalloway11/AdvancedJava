@@ -13,6 +13,5 @@ package myinterface;
 public interface SalaryPlusComissionEmployee {
     public double getComissionRate();
     public void setComissionRate(double comissionRate);
-    public double getTotalSalary();
-    public String toString();
+    public double getTotalSalary(double sales);
 }

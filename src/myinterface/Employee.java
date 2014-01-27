@@ -17,6 +17,5 @@ public interface Employee {
     public String getLastName();
     public void setLastName(String lastName);
     public int getEmpID();
-    public String toString();
    
 }

@@ -13,5 +13,4 @@ package myinterface;
 public interface SalariedEmployee {
     public double getSalary();
     public void setSalary(double salary);
-    public String toString();
 }
