@@ -39,4 +39,6 @@ public abstract class HourlyEmployee extends Employee{
     public double getWeeklyWage(){
         return hour_rate * weeklyHours;
     }
+    
+    public abstract String toString();
 }

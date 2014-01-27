@@ -29,4 +29,6 @@ public abstract class SalaryPlusComissionEmployee extends SalariedEmployee{
     public double getTotalSalary(double sales){
         return super.getSalary() * (sales * this.comissionRate);
     }
+    
+    public abstract String toString();
 }

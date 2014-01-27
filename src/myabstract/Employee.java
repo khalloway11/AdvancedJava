@@ -10,7 +10,7 @@ package myabstract;
  *
  * @author Keiji
  */
-public class Employee {
+public abstract class Employee {
     private String firstName, lastName;
     private int empID;
     private static int empNo = 0;
@@ -40,4 +40,6 @@ public class Employee {
     public int getEmpID() {
         return empID;
     }
+    
+    public abstract String toString();
 }

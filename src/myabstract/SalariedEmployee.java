@@ -26,4 +26,5 @@ public abstract class SalariedEmployee extends Employee{
         this.salary = salary;
     }
     
+    public abstract String toString();
 }
