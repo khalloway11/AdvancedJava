@@ -10,7 +10,7 @@ package myconcrete;
  *
  * @author Keiji
  */
-public class Employee {
+public class Employee implements myinterface.Employee{
     private String firstName, lastName;
     private int empID;
     private static int empNo = 0;
@@ -21,24 +21,33 @@ public class Employee {
         this.empID = empNo++;
     }
 
+    @Override
     public String getFirstName() {
         return firstName;
     }
 
+    @Override
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    @Override
     public String getLastName() {
         return lastName;
     }
 
+    @Override
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    @Override
     public int getEmpID() {
         return empID;
     }
     
+    @Override
+    public String toString(){
+        return "Employee ID: "+ this.empID + "\rEmployee name: " + this.lastName + ", " + this.firstName;
+    }
 }

@@ -10,8 +10,8 @@ package inheritance.practice;
  *
  * @author Keiji
  */
-public class InheritancePractice {
-
+public class InheritancePractice{
+    
     /**
      * @param args the command line arguments
      */

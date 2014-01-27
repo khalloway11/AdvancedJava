@@ -10,7 +10,7 @@ package myabstract;
  *
  * @author Keiji
  */
-public abstract class SalaryPlusComissionEmployee extends SalariedEmployee implements myinterface.SalaryPlusComissionEmployee{
+public abstract class SalaryPlusComissionEmployee extends SalariedEmployee{
     private double comissionRate;
     
     public SalaryPlusComissionEmployee(String fname, String lname, double salary, double comission){
@@ -18,12 +18,10 @@ public abstract class SalaryPlusComissionEmployee extends SalariedEmployee imple
         this.comissionRate = comission;
     }
 
-    @Override
     public double getComissionRate() {
         return comissionRate;
     }
 
-    @Override
     public void setComissionRate(double comissionRate) {
         this.comissionRate = comissionRate;
     }
@@ -31,7 +29,4 @@ public abstract class SalaryPlusComissionEmployee extends SalariedEmployee imple
     public double getTotalSalary(double sales){
         return super.getSalary() * (sales * this.comissionRate);
     }
-    
-    @Override
-    public abstract String toString();
 }

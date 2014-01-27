@@ -10,7 +10,7 @@ package myabstract;
  *
  * @author Keiji
  */
-public abstract class Employee implements myinterface.Employee{
+public class Employee {
     private String firstName, lastName;
     private int empID;
     private static int empNo = 0;
@@ -40,7 +40,4 @@ public abstract class Employee implements myinterface.Employee{
     public int getEmpID() {
         return empID;
     }
-    
-    @Override
-    public abstract String toString();
 }

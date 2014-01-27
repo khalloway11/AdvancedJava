@@ -10,7 +10,7 @@ package myabstract;
  *
  * @author Keiji
  */
-public abstract class SalariedEmployee extends Employee implements myinterface.SalariedEmployee{
+public abstract class SalariedEmployee extends Employee{
     private double salary;
     
     public SalariedEmployee(String fname, String lname, double salary){
@@ -18,17 +18,12 @@ public abstract class SalariedEmployee extends Employee implements myinterface.S
         this.salary = salary;
     }
 
-    @Override
     public double getSalary() {
         return salary;
     }
 
-    @Override
     public void setSalary(double salary) {
         this.salary = salary;
     }
-    
-    @Override
-    public abstract String toString();
     
 }
