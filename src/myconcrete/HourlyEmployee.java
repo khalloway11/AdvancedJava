@@ -10,7 +10,7 @@ package myconcrete;
  *
  * @author Keiji
  */
-public class HourlyEmployee extends Employee{
+public class HourlyEmployee extends Employee implements myinterface.HourlyEmployee{
     private double hour_rate;
     private double weeklyHours;
     
@@ -20,23 +20,33 @@ public class HourlyEmployee extends Employee{
         this.weeklyHours = hours;
     }
 
+    @Override
     public double getHour_rate() {
         return hour_rate;
     }
 
+    @Override
     public void setHour_rate(double hour_rate) {
         this.hour_rate = hour_rate;
     }
 
+    @Override
     public double getWeeklyHours() {
         return weeklyHours;
     }
 
+    @Override
     public void setWeeklyHours(double weeklyHours) {
         this.weeklyHours = weeklyHours;
     }
     
+    @Override
     public double getWeeklyWage(){
         return hour_rate * weeklyHours;
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\rHourly rate: " + this.hour_rate + "\rHours per week: " + this.weeklyHours;
     }
 }
