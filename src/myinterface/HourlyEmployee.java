@@ -10,12 +10,52 @@ package myinterface;
  *
  * @author Keiji
  */
-public interface HourlyEmployee {
-
-    public double getHour_rate();
-    public void setHour_rate(double hour_rate);
-    public double getWeeklyHours();
-    public void setWeeklyHours(double weeklyHours);
-    public double getWeeklyWage();
-    public String toString();
+public class HourlyEmployee implements Employee{
+    private String firstName;
+    private String lastName;
+    private int empID;
+    private double hourlyRate;
+    private double weeklyHours;
+    
+    public  HourlyEmployee(String fname, String lname, double pay, double hours, int empID){
+        this.firstName = fname;
+        this.lastName = lname;
+        this.empID = empID;
+        this.hourlyRate = pay;
+        this.weeklyHours = hours;
+    }
+    
+    public String getFirstName(){
+        return this.firstName;
+    }
+    
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    
+    public String getLastName(){
+        return this.lastName;
+    }
+    
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    
+    public void setEmpID(int empID){
+        this.empID = empID;
+    }
+    
+    
+    public int getEmpID(){
+        return this.empID;
+    }
+    
+    public double getYearlyPay(){
+        return (hourlyRate * weeklyHours) * 52;
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\rHourly rate: " + this.hourlyRate + "\rHours per week: " + this.weeklyHours;
+    }
 }

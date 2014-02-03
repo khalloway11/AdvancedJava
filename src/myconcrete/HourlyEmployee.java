@@ -10,43 +10,38 @@ package myconcrete;
  *
  * @author Keiji
  */
-public class HourlyEmployee extends Employee implements myinterface.HourlyEmployee{
-    private double hour_rate;
+public class HourlyEmployee extends Employee {
+    private double hourlyRate;
     private double weeklyHours;
     
     public  HourlyEmployee(String fname, String lname, double pay, double hours){
         super(fname, lname);
-        this.hour_rate = pay;
+        this.hourlyRate = pay;
         this.weeklyHours = hours;
     }
 
-    @Override
     public double getHour_rate() {
-        return hour_rate;
+        return hourlyRate;
     }
 
-    @Override
-    public void setHour_rate(double hour_rate) {
-        this.hour_rate = hour_rate;
+    public void setHour_rate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
     }
 
-    @Override
     public double getWeeklyHours() {
         return weeklyHours;
     }
 
-    @Override
     public void setWeeklyHours(double weeklyHours) {
         this.weeklyHours = weeklyHours;
     }
-    
-    @Override
+
     public double getWeeklyWage(){
-        return hour_rate * weeklyHours;
+        return hourlyRate * weeklyHours;
     }
     
     @Override
     public String toString(){
-        return super.toString() + "\rHourly rate: " + this.hour_rate + "\rHours per week: " + this.weeklyHours;
+        return super.toString() + "\rHourly rate: " + this.hourlyRate + "\rHours per week: " + this.weeklyHours;
     }
 }

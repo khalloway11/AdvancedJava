@@ -10,7 +10,7 @@ package myconcrete;
  *
  * @author Keiji
  */
-public class SalaryPlusComissionEmployee extends SalariedEmployee implements myinterface.SalaryPlusComissionEmployee{
+public class SalaryPlusComissionEmployee extends SalariedEmployee{
     private double comissionRate, totalSales;
     
     public SalaryPlusComissionEmployee(String fname, String lname, double salary, double comission){
@@ -25,12 +25,10 @@ public class SalaryPlusComissionEmployee extends SalariedEmployee implements myi
         this.totalSales = sales;
     }
 
-    @Override
     public double getComissionRate() {
         return comissionRate;
     }
 
-    @Override
     public void setComissionRate(double comissionRate) {
         this.comissionRate = comissionRate;
     }
@@ -47,7 +45,6 @@ public class SalaryPlusComissionEmployee extends SalariedEmployee implements myi
         return this.totalSales * this.comissionRate;
     }
 
-    @Override
     public double getTotalSalary(){
         return super.getSalary() + (this.totalSales * this.comissionRate);
     }

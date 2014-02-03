@@ -10,22 +10,23 @@ package myabstract;
  *
  * @author Keiji
  */
-public abstract class HourlyEmployee extends Employee{
-    private double hour_rate;
+public class HourlyEmployee extends Employee{
+    private double hourlyRate;
     private double weeklyHours;
     
     public  HourlyEmployee(String fname, String lname, double pay, double hours){
-        super(fname, lname);
-        this.hour_rate = pay;
+        super.setFirstName(fname);
+        super.setLastName(lname);
+        this.hourlyRate = pay;
         this.weeklyHours = hours;
     }
 
     public double getHour_rate() {
-        return hour_rate;
+        return hourlyRate;
     }
 
-    public void setHour_rate(double hour_rate) {
-        this.hour_rate = hour_rate;
+    public void setHour_rate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
     }
 
     public double getWeeklyHours() {
@@ -37,8 +38,16 @@ public abstract class HourlyEmployee extends Employee{
     }
     
     public double getWeeklyWage(){
-        return hour_rate * weeklyHours;
+        return hourlyRate * weeklyHours;
     }
     
-    public abstract String toString();
+    @Override
+    public double getYearlyPay(){
+        return (this.getWeeklyWage() * 52);
+    }
+    
+    @Override
+    public String toString(){
+        return "Employee ID: "+ super.getEmpID() + "\rEmployee name: " + super.getLastName() + ", " + super.getFirstName() + "\rHourly rate: " + this.hourlyRate + "\rHours per week: " + this.weeklyHours;
+    }
 }

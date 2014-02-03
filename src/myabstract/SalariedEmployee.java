@@ -10,21 +10,26 @@ package myabstract;
  *
  * @author Keiji
  */
-public abstract class SalariedEmployee extends Employee{
+public class SalariedEmployee extends Employee{
     private double salary;
     
     public SalariedEmployee(String fname, String lname, double salary){
-        super(fname, lname);
+        super.setFirstName(fname);
+        super.setLastName(lname);
         this.salary = salary;
     }
 
-    public double getSalary() {
-        return salary;
+    @Override
+    public double getYearlyPay(){
+        return this.salary;
     }
 
     public void setSalary(double salary) {
         this.salary = salary;
     }
     
-    public abstract String toString();
+    @Override
+    public String toString(){
+        return "Employee ID: "+ super.getEmpID() + "\rEmployee name: " + super.getLastName() + ", " + super.getFirstName() + "\rAnnual salary: $" + this.salary;
+    }
 }

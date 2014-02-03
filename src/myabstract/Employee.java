@@ -13,13 +13,8 @@ package myabstract;
 public abstract class Employee {
     private String firstName, lastName;
     private int empID;
-    private static int empNo = 0;
+    private static int empCount = 0;
     
-    public Employee(String fname, String lname){
-        this.firstName = fname;
-        this.lastName = lname;
-        this.empID = empNo++;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -40,6 +35,8 @@ public abstract class Employee {
     public int getEmpID() {
         return empID;
     }
+    
+    public abstract double getYearlyPay();
     
     public abstract String toString();
 }

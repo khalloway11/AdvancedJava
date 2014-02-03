@@ -16,7 +16,9 @@ public interface Employee {
     public void setFirstName(String firstName);
     public String getLastName();
     public void setLastName(String lastName);
+    public void setEmpID(int empID);
     public int getEmpID();
+    public double getYearlyPay();
     public String toString();
    
 }
